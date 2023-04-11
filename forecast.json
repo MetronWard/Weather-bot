@@ -1,0 +1,37 @@
+[
+    {
+        "hour": "17:00",
+        "temp_c": 29.4,
+        "condition": "Sunny",
+        "wind_speed": 26.3,
+        "rain": "No"
+    },
+    {
+        "hour": "18:00",
+        "temp_c": 28.4,
+        "condition": "Sunny",
+        "wind_speed": 24.5,
+        "rain": "No"
+    },
+    {
+        "hour": "19:00",
+        "temp_c": 28.3,
+        "condition": "Clear",
+        "wind_speed": 21.2,
+        "rain": "No"
+    },
+    {
+        "hour": "20:00",
+        "temp_c": 28.3,
+        "condition": "Partly cloudy",
+        "wind_speed": 16.2,
+        "rain": "No"
+    },
+    {
+        "hour": "21:00",
+        "temp_c": 28.0,
+        "condition": "Patchy rain possible",
+        "wind_speed": 15.5,
+        "rain": "Yes"
+    }
+]
