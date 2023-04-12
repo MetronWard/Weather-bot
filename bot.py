@@ -42,7 +42,6 @@ class Bot:
                 f'{item["hour"]}\n'
                 f'Condition - {item["condition"]}\n'
                 f'Wind Speed - {item["wind_speed"]}\n'
-                f'Chance of Rain - {item["rain"]}'
             )
         logging.debug(f'Weather data returned')
 

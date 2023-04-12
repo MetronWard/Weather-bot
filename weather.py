@@ -66,14 +66,9 @@ class Weather:
                 temp_c = chosen_forecast["temp_c"]
                 condition = chosen_forecast["condition"]["text"]
                 wind_speed = chosen_forecast["wind_kph"]
-
-                if chosen_forecast["will_it_rain"] == 0:
-                    rain = 'No'
-                else:
-                    rain = 'Yes'
                 clean_forecast = {'hour': f'{hour}:00', 'temp_c': temp_c, 'condition': condition,
                                   'wind_speed': wind_speed,
-                                  'rain': rain}
+                                  }
 
                 total_forecast.append(clean_forecast)
 
