@@ -1,4 +1,5 @@
 import logging
+from functools import wraps
 import shelve
 
 from telegram import Update
@@ -20,12 +21,28 @@ class Bot:
         logging.debug(f'Bot Class created with the default location set as {self.location} '
                       f'and an api key of {self.telegram_key}')
 
+    @staticmethod
+    def send_action(action):
+        """Sends `action` while processing func command."""
+
+        def decorator(func):
+            @wraps(func)
+            async def command_func(self, update: Update, context: ContextTypes.DEFAULT_TYPE, *args, **kwargs):
+                await context.bot.send_chat_action(chat_id=update.effective_message.chat_id, action=action)
+                return await func(self, update, context, *args, **kwargs)
+
+            return command_func
+
+        return decorator
+
+    @send_action('typing')
     async def start(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         """Function to respond to the /start command """
         user = update.effective_user
         await update.message.reply_text('Hiii')
         logging.debug(f'/start command sent by the User')
 
+    @send_action('typing')
     async def help(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         user = update.effective_user
         await update.message.reply_text('This is a bot created by Eugene Ward to provide timely weather reports\n'
@@ -46,10 +63,12 @@ class Bot:
             )
         logging.debug(f'Weather data returned')
 
+    @send_action('typing')
     async def post_forecast(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         user = update.effective_user
         await self._get_forecast(update=update, context=context)
 
+    @send_action('typing')
     async def message(self, update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         self.location = update.message.text
         await update.message.reply_text(f'Current location - {self.location}')

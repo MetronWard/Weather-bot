@@ -1,37 +1,44 @@
 [
     {
-        "hour": "17:00",
+        "hour": "13:00",
+        "temp_c": 31.1,
+        "condition": "Sunny",
+        "wind_speed": 22.0,
+        "rain": "No"
+    },
+    {
+        "hour": "14:00",
+        "temp_c": 30.5,
+        "condition": "Sunny",
+        "wind_speed": 23.4,
+        "rain": "No"
+    },
+    {
+        "hour": "15:00",
+        "temp_c": 30.1,
+        "condition": "Sunny",
+        "wind_speed": 23.4,
+        "rain": "No"
+    },
+    {
+        "hour": "16:00",
         "temp_c": 29.4,
         "condition": "Sunny",
-        "wind_speed": 26.3,
+        "wind_speed": 24.1,
+        "rain": "No"
+    },
+    {
+        "hour": "17:00",
+        "temp_c": 29.5,
+        "condition": "Sunny",
+        "wind_speed": 24.8,
         "rain": "No"
     },
     {
         "hour": "18:00",
-        "temp_c": 28.4,
+        "temp_c": 28.5,
         "condition": "Sunny",
-        "wind_speed": 24.5,
+        "wind_speed": 23.0,
         "rain": "No"
-    },
-    {
-        "hour": "19:00",
-        "temp_c": 28.3,
-        "condition": "Clear",
-        "wind_speed": 21.2,
-        "rain": "No"
-    },
-    {
-        "hour": "20:00",
-        "temp_c": 28.3,
-        "condition": "Partly cloudy",
-        "wind_speed": 16.2,
-        "rain": "No"
-    },
-    {
-        "hour": "21:00",
-        "temp_c": 28.0,
-        "condition": "Patchy rain possible",
-        "wind_speed": 15.5,
-        "rain": "Yes"
     }
 ]
